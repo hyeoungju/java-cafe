@@ -1,0 +1,27 @@
+CREATE TABLE MenuItem (
+	mId				BIGINT				PRIMARY KEY AUTO_INCREMENT,
+	categoryId		BIGINT				NOT NULL,
+	menuName		VARCHAR(40)			NOT NULL,
+	menuPrice		DOUBLE				NOT NULL,
+	menuImgUrl		VARCHAR(100)		NOT NULL,
+	menuQuantity	INT					NOT NULL	DEFAULT  0,
+	regDate			TIMESTAMP			NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	
+	CONSTRAINT MenuItem_categoryId_FK 
+		FOREIGN KEY (categoryId) REFERENCES Category(cId)
+)AUTO_INCREMENT = 1001;
+
+
+
+SELECT * FROM MenuItem;
+SELECT * FROM Category;
+DROP TABLE Category;
+DELETE FROM MenuItem WHERE mId = '1006';
+INSERT INTO Category (cName) VALUES ('디카페인');
+
+CREATE TABLE Category (
+	cId				BIGINT				PRIMARY KEY AUTO_INCREMENT,
+	cName			VARCHAR(40)			NOT NULL
+
+)AUTO_INCREMENT = 2001;
+
