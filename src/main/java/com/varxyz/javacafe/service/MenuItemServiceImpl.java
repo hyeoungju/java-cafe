@@ -26,5 +26,10 @@ public class MenuItemServiceImpl implements MenuItemService{
 	public List<MenuItem> getMenuItem(String cName) {
 		return null;
 	}
+
+	@Override
+	public String getCategoryName(long categoryId) {
+		return menuItemDao.getCategoryName(categoryId);
+	}
 	
 }

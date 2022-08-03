@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h3>메뉴 등록하기</h3>
-	<form:form method="post" modelAttribute="menuItem">
+	<form:form method="post" modelAttribute="menuItem" enctype="multipart/form-data" >
 	<label>카테고리 선택</label>
 	<form:select path="categoryId">
 	<option value="unknown">--선택--</option>
@@ -23,11 +23,12 @@
 	<form:input path="menuName"/><br>
 	<label>메뉴 가격</label>
 	<form:input path="menuPrice"/><br>
-	<label>메뉴 이미지</label>
-	<form:input path="menuImgUrl"/><br>
 	<label>메뉴 수량</label>
 	<form:input path="menuQuantity"/><br>
+	<label>메뉴 이미지</label>
+	<form:input path="file" type="file"/><br>
 	<input type="submit" value="등록하기"/>
 </form:form>
+<button type="button" onclick='location.href="<c:url value='/admin_main'/>"'>메인으로</button>
 </body>
 </html>

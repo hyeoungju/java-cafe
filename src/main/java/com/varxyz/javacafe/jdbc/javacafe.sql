@@ -3,7 +3,7 @@ CREATE TABLE MenuItem (
 	categoryId		BIGINT				NOT NULL,
 	menuName		VARCHAR(40)			NOT NULL,
 	menuPrice		DOUBLE				NOT NULL,
-	menuImgUrl		VARCHAR(100)		NOT NULL,
+	menuImgName		VARCHAR(500)		NOT NULL,
 	menuQuantity	INT					NOT NULL	DEFAULT  0,
 	regDate			TIMESTAMP			NOT NULL	DEFAULT CURRENT_TIMESTAMP,
 	
@@ -12,12 +12,11 @@ CREATE TABLE MenuItem (
 )AUTO_INCREMENT = 1001;
 
 
-
 SELECT * FROM MenuItem;
 SELECT * FROM Category;
 DROP TABLE Category;
-DELETE FROM MenuItem WHERE mId = '1006';
-INSERT INTO Category (cName) VALUES ('디카페인');
+DELETE FROM Category WHERE cId = '2013';
+INSERT INTO Category (cName) VALUES ('스무디&프라페');
 
 CREATE TABLE Category (
 	cId				BIGINT				PRIMARY KEY AUTO_INCREMENT,

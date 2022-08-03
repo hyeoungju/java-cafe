@@ -12,9 +12,10 @@ import lombok.Setter;
 public class MenuItem {
 	private long mId;
 	private long categoryId;
+	private Category category;
 	private String menuName;
 	private double menuPrice;
-	private String menuImgUrl;
+	private String menuImgName;
 	private int menuQuantity;
 	private Date regDate;
 	
