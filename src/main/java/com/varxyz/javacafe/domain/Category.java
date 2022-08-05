@@ -1,21 +1,36 @@
 package com.varxyz.javacafe.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
-@AllArgsConstructor
 public class Category {
-	private long cId;
-	private String cName;
+	private long cid;
+	private String name;
 	
 	public Category() {
 		
 	}
 	
-	public Category(long cId) {
-		this.cId = cId;
+	public Category(long cid) {
+		this.cid = cid;
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Category [cid=" + cid + ", name=" + name + "]";
+	}
+
+	public Category(long cid, String name) {
+		super();
+		this.cid = cid;
+		this.name = name;
+	}
+	
+	
+	
+	
 }

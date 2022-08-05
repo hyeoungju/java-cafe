@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+	font-family: 'Noto Sans KR', sans-serif;	
+}
+
+#header {
+    height: 70px;
+    background-color: #5A8F7B;
+    display : block;
+}
+.header-right {
+	margin-top : 15px;
+	float : right;
+	margin-right : 30px;
+}
+.header-left {
+	margin-top : 15px;
+	float : left;
+	font-size :30px;
+	font-weight : 700;
+	color : white;
+	margin-left : 30px;
+}
+
+.admin_button {
+	width: 100px;
+    height: 40px;
+    font-size: 11px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    border-style : none;
+    color : white;
+}
+
+.category_container {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.menu_container {
+    margin-top : 50px;
+	
+}
+
+img {
+	width: 300px;
+	height: 300px;
+}
+.category_name {
+	width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin: 30px 50px;
+    background-color: gray;
+    border-radius: 10px;
+    border: 1px solid #F2DF3A;
+    color : white;
+}
+
+.menuItem_ul {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menuItem {
+	border: 1px solid gray;
+    padding: 15px;
+    border-collapse : collapse;
+}
+
+.menu_text {
+	width : 200px;
+	margin : 0 auto;
+	text-align: center;
+    color: black;
+    font-size: 17px;
+}
+
+.default_button {
+	width: 80px;
+    height: 40px;
+    font-size: 15px;
+    margin: 30px 50px;
+    background-color: gray;
+    border-radius: 10px;
+    border: 1px solid #F2DF3A;
+    color : white;
+}
+
+.menu_description {
+	width : 200px;
+	margin : 0 auto;
+	text-align: center;
+    color: black;
+    font-size: 15px;
+}
+
+.cart-container {
+	background-color : #355764;
+	display : flex;
+	height : 300px;
+	padding : 20px;
+	margin-top : 70px;
+	
+}
+
+.cart_content {
+	font-weight: 600;
+    color: white;
+    display: block;
+    margin: 50px 25px;
+    
+}
+
+.cart_button {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.total_price {
+	width: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.cart_title {
+	width: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.close1:after {
+	content: "\00d7";
+	font-size:15pt;
+	line-height:50px;
+	color : white;
+	padding: 10px;
+}
+
+/*관리자메인*/
+.admin_main {
+	min-height: calc(100vh - 150px);
+}
+
+

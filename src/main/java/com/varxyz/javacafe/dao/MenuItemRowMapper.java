@@ -13,7 +13,7 @@ public class MenuItemRowMapper implements RowMapper<MenuItem> {
 
 	@Override
 	public MenuItem mapRow(ResultSet rs, int rowNum) throws SQLException {
-		MenuItem menuItem = null;
+		MenuItem menuItem = new MenuItem();
 		menuItem.setMId(rs.getLong("mId"));
 		menuItem.setCategory(new Category(rs.getLong("categoryId")));
 		menuItem.setMenuName(rs.getString("menuName"));

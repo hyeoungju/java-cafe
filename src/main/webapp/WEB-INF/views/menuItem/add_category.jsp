@@ -12,7 +12,7 @@
 <h3>카테고리 추가</h3>
 <form:form method="post" modelAttribute="Category">
 	<label>카테고리 이름</label>
-	<form:input path="cName"/>
+	<form:input path="name"/>
 	<input type="submit" value="등록하기">
 </form:form>
 <button type="button" onclick='location.href="<c:url value='/admin_main'/>"'>메인으로</button>

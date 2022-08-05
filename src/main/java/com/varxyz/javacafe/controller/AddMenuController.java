@@ -2,8 +2,6 @@ package com.varxyz.javacafe.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,16 +33,17 @@ public class AddMenuController {
 	@GetMapping
 	public String addMenuForm(Model model) {
 		model.addAttribute("menuItem", new MenuItemCommand());
+		model.addAttribute("categoryList", cateService.getCategoryList());
 		return "menuItem/add_menuItem";
 	}
 	
-	List<CategoryProvider> list = new ArrayList<CategoryProvider>();
+//	List<CategoryProvider> list = new ArrayList<CategoryProvider>();
 	
-	@ModelAttribute("categoryProviderList")
-	public List<CategoryProvider> getCategoryProviderList() {
-		List<CategoryProvider> list = cateService.getCategoryName();
-		return list;
-	}
+	/*
+	 * @ModelAttribute("categoryProviderList") public List<CategoryProvider>
+	 * getCategoryProviderList() { List<CategoryProvider> list =
+	 * cateService.getCategoryList(); return list; }
+	 */
 	
 	@PostMapping
 	public String addMenuItem(@ModelAttribute("menuItem")

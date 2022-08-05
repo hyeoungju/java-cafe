@@ -21,18 +21,19 @@ public class CategoryDao {
 	
 	public void addCategory(Category category) {
 		String sql = "INSERT INTO Category (cName) VALUES(?)";
-		jdbcTemplate.update(sql, category.getCName());
+		jdbcTemplate.update(sql, category.getName());
 	}
 	
-	public List<CategoryProvider> getCategoryName() {
+	public List<Category> getCategoryList() {
 		String sql = "SELECT * FROM Category ";
-		return jdbcTemplate.query(sql, new RowMapper<CategoryProvider>() {
+		return jdbcTemplate.query(sql, new RowMapper<Category>() {
 			
 			@Override
-			public CategoryProvider mapRow(ResultSet rs, int rowNum) throws SQLException {
-				CategoryProvider c = new CategoryProvider(rs.getLong("cId"), rs.getString("cName"));
+			public Category mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Category c = new Category(rs.getLong("cId"), rs.getString("cName"));
 				return c;
 			}
 		});
 	}
+
 }

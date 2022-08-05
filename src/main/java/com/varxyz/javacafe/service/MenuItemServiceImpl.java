@@ -13,23 +13,31 @@ public class MenuItemServiceImpl implements MenuItemService{
 	@Autowired
 	MenuItemDao menuItemDao;
 	
-	public MenuItemServiceImpl(DataSource dataSource) {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public  void addMenuItem(MenuItem menuItem) {
 		menuItemDao.addMenuItem(menuItem);
 	}
 	
 	@Override
-	public List<MenuItem> getMenuItem(String cName) {
-		return null;
+	public List<MenuItem> getMenuItem() {
+		return menuItemDao.getMenuItem();
 	}
 
 	@Override
 	public String getCategoryName(long categoryId) {
 		return menuItemDao.getCategoryName(categoryId);
 	}
+
+	@Override
+	public List<MenuItem> getMenuItem(long categoryId) {
+		return menuItemDao.getAllMenuItem(categoryId);
+	}
+
+	@Override
+	public MenuItem getMenuItemBymenuName(String menuImgName) {
+		return menuItemDao.getMenuItemBymenuName(menuImgName);
+	}
+
+
 	
 }

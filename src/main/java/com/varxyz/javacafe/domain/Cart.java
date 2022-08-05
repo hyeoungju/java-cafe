@@ -6,9 +6,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class Cart {
-	private String menuName;
-	private String purchaseQuantity;
-	
+	private	long cartId;
+	private int purchaseQuantity;
+	private String menuItemName;
+	private String menuImgName;
+	private double menuPrice;
 }

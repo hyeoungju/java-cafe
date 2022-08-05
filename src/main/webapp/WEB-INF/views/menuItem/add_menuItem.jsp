@@ -14,9 +14,9 @@
 	<label>카테고리 선택</label>
 	<form:select path="categoryId">
 	<option value="unknown">--선택--</option>
-		<form:options 	itemValue="cId"
-						itemLabel="cName"
-						items="${categoryProviderList}"/>
+		<form:options 	itemValue="cid"
+						itemLabel="name"
+						items="${categoryList}"/>
 	</form:select><br>
 	
 	<label>메뉴 이름</label>

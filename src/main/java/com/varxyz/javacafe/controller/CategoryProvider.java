@@ -11,4 +11,7 @@ public class CategoryProvider {
 	private long cId;
 	private String cName;
 	
+	public CategoryProvider(String cName) {
+		this.cName = cName;
+	}
 }
